@@ -1,0 +1,5 @@
+rootProject.name = 'toy-dynamic-board'
+include 'dynamic-board-core'
+include 'dynamic-board-web'
+include 'dynamic-board-api'
+

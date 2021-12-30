@@ -9,6 +9,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/develop?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+    # username: root
+    # password: 1234
     username: root
     password: 1234
   jpa:
@@ -19,4 +21,4 @@ spring:
       hibernate:
         format_sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none

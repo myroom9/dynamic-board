@@ -2,15 +2,14 @@ package com.example.dynamicboardweb.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfiguration {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -26,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfiguration {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("")
+                .defaultSuccessUrl("/")
                 // TODO: 어드민하고 일반사용자 화면 어캐 나눠주지?
                 .and()
                 .logout()

@@ -1,7 +1,7 @@
 spring:
   thymeleaf:
     cache: false
-    prefix: file:calendar-api/src/main/resources/templates/
+    prefix: file:dynamic-board-web/src/main/resources/templates/
   web:
     resources:
       cache:

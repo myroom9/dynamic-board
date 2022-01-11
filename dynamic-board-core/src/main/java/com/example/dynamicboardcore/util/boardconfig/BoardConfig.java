@@ -1,4 +1,4 @@
-package com.example.dynamicboardcore.util.entity;
+package com.example.dynamicboardcore.util.boardconfig;
 
 import lombok.Getter;
 
